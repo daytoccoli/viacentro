@@ -27,20 +27,27 @@
     </nav>
 
 <section>
-    <div class="carousel">
-        <button id="prevBtn" class="carousel-btn" onclick="plusSlides(-1)">Anterior</button>
-        <div class="carousel-slide">
-            <img src="./IMG/istockphoto-1164255063-612x612.jpg" alt="Imagen 1">
+    <div id="carousel-container">
+        <button style="font-size: 50px;" class="carousel-btn prev" onclick="prevSlide()">&#9664; </button>
+        <div id="carousel">
+            <div class="carousel-slide">
+                <img src="./IMG/istockphoto-1164255063-612x612.jpg" alt="Imagen 1">
+                <div class="carousel-text">Texto de la Imagen 1</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./IMG/istockphoto-1177117400-612x612.jpg" alt="Imagen 2">
+                <div class="carousel-text">Texto de la Imagen 2</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./IMG/istockphoto-1186577710-612x612.jpg" alt="Imagen 3">
+                <div class="carousel-text">Texto de la Imagen 3</div>
+            </div>
+            
+                <div class="arrow-right"></div>
+            </button>
         </div>
-        <div class="carousel-slide">
-            <img src="./IMG/istockphoto-1177117400-612x612.jpg" alt="Imagen 2">
-        </div>
-        <div class="carousel-slide">
-            <img src="./IMG/istockphoto-1186577710-612x612.jpg" alt="Imagen 3">
-        </div>
-        <button id="nextBtn" class="carousel-btn" onclick="plusSlides(1)">Siguiente</button>
+        <button style="font-size: 50px;" class="carousel-btn next" onclick="nextSlide()">&#9654;</button>
 
-        </button>
     </div>
 </section>
 

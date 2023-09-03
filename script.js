@@ -6,23 +6,21 @@ menu.onclick = () => {
     navList.classList.toggle('open');
 }
 
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-    let slides = document.getElementsByClassName("carousel-slide");
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + 3) % 3; // 3 es el número de imágenes
+    updateCarousel();
+}
 
-    slideIndex++;
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 3;
+    updateCarousel();
+}
 
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-
-    setTimeout(showSlides, 10000); // Cambia la imagen cada 10 segundos (ajusta el tiempo según tu preferencia)
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
 }

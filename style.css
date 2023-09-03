@@ -77,38 +77,6 @@ nav {
     display: none;
 }
 
-section {
-    padding: 0 15%;
-}
-
-.carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-btn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-}
-
-.carousel-slide {
-    float: left;
-    width: 100%;
-    display: none;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-
 @media (max-width:1350px) {
     nav {
         padding: 20px 5%;
@@ -176,6 +144,100 @@ img {
     .m-text h1 {
         font-size: 50px;
     }
+}
+
+section {
+    padding: 0 15%;
+}
+
+#carousel-container {
+    position: center;
+    width: 100%;
+    margin-top: 90px; /* esto despega la imagen del navbar*/
+    overflow: hidden;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+img {
+    max-width: 200%;
+    height: auto;
+    display: block; /* Elimina espacios vacíos debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+#carousel-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Estilos para los botones de navegación */
+.carousel-btn {
+    background-color: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    color: rgb(124, 8, 8);
+    z-index: 1;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Estilos para las diapositivas */
+.carousel-slide {
+    position: relative;
+}
+
+img {
+    width: 90%;
+    height: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
 }
 
 
